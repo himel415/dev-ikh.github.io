@@ -1,0 +1,475 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+.dotted-hr{
+    border: dotted 7px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+.dotted-h{
+    border: dotted 7px rgb(18, 167, 226);
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+a{
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+[class*="col-"]{
+    float: left;
+    padding: 8px;
+}
+/* for mobile*/
+[class*="col-"]{
+    width: 100%;
+
+}
+.navbar{
+    background-color: #09494b;
+    padding: 1% 5%;
+    text-align: center;
+
+}
+
+.navbar::after{
+    content: '';
+    display:table;
+    clear: both;
+
+}
+.navbar h1{
+    color: #FEE715FF;
+    margin: 0;
+    padding-top: 10px;
+
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+.nav-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 6px;
+    padding: 6px;
+}
+.nav-menu a:hover{
+    background-color: yellowgreen;
+}
+.home{
+    text-align: center;
+    padding-top: 80px;
+    height: 400px;
+    font-family:'Ubuntu', sans-serif ;
+    font-size: 20px;
+    background: url("logo.jpg") no-repeat left;
+    color:crimson;
+    font-weight: 700;
+    display: block;
+  
+}
+.home::after{
+    content: '';
+    display: table;
+    clear: both;
+
+}
+.home .home-content{
+    padding: 10px;
+}
+/* topdown button */
+
+/* topdown button */
+
+
+/* about section strats here */
+h2{
+
+    font-size: 2.5rem;
+    text-align: center;
+
+}
+.about-me{
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color:white;
+    text-align: center;
+    font-family: 'Montserrat',sans-serif;
+
+}
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.aboutme-image img{
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+
+}
+.about-me p{
+    text-align: center;
+}
+
+.cv-button{
+    background-color:crimson;
+    color: whitesmoke;
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+/* about section ends here */
+/* education section starts here */
+#education{
+    background-color: #39a4ac;
+
+}
+.edu h1{
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+}
+.edutable{
+    margin-top: 10px;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    text-align: center;
+    
+}
+.edutable thead{
+    background-color: crimson;
+    font-weight: bold;
+}
+.edutable tbody{
+    background-color: #05141b;
+    color: white;
+   
+}
+.edutable td{
+    padding: 10px;
+}
+/* education section ends here */
+/* Skills section starts here */
+.skillss{
+    padding: 1% 0%;
+    padding-left: 20px;
+    color: black;
+}
+.skillss .card{
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+   
+    transition: 0.3s;
+    
+}
+.skillss .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+    background-color:crimson;
+}
+.skillss .card::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.skill-container{
+    padding-right: 45px;
+}
+.skill-container li{
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 10px;
+    position: relative;
+}
+.skill-container li::before{
+    content:'';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 90%;
+    height: 10px;
+    left: 0%;
+    border-radius: 1000px;
+    background-color: rgb(86,86,153,.3);
+}
+
+
+.skill-container li::after{
+    content:'';
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 0;
+    height: 10px;
+    left: 0%;
+    border-radius: 1000px;
+    background-color: rgb(86,86,153,1);
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    -o-animation-iteration-count: infinite;
+}
+.skill-container li.c::after{
+    animation-name: c;
+}
+@keyframes c{
+    to{
+        width: 70%;
+    }
+}
+
+.skill-container li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.java::after{
+    animation-name: java;
+}
+@keyframes java{
+    to{
+        width: 60%;
+    }
+}
+.skill-container li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+    to{
+        width: 20%;
+    }
+}
+.skill-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.python::after{
+    animation-name: python;
+}
+@keyframes python{
+    to{
+        width: 50%;
+    }
+}
+.skill-container li.mysql::after{
+    animation-name: mysql;
+}
+@keyframes mysql{
+    to{
+        width: 70%;
+    }
+}
+.skill-container li.php::after{
+    animation-name: php;
+}
+@keyframes php{
+    to{
+        width: 10%;
+    }
+}
+
+/* working area start her */
+.skill-container li.web-dev::after{
+    animation-name: web-dev;
+}
+@keyframes web-dev{
+    to{
+        width: 50%;
+    }
+}
+.skill-container li.app-dev::after{
+    animation-name: app-dev;
+}
+@keyframes app-dev{
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.graphic1::after{
+    animation-name: graphic1;
+}
+@keyframes graphic1{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.graphic2::after{
+    animation-name: graphic2;
+}
+@keyframes graphic2{
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.software::after{
+    animation-name: software;
+}
+@keyframes software{
+    to{
+        width: 80%;
+    }
+}
+.skill-container li.video::after{
+    animation-name: video;
+}
+@keyframes video{
+    to{
+        width: 40%;
+    }
+}
+.skill-container li.comp-net::after{
+    animation-name: comp-net;
+}
+@keyframes comp-net{
+    to{
+        width: 90%;
+    }
+}
+.skill-container li.content::after{
+    animation-name: content;
+}
+@keyframes content{
+    to{
+        width: 60%;
+    }
+}
+.skill-container::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* working area ends her */
+/* Skills section ends here */
+/* favourite starts */
+.fav{
+    padding: 1% 0%;
+    padding-left: 20px;
+    color: black;
+}
+.fav .card{
+    background-color:#39a4ac;
+    border-radius: 5px;
+    padding: 10px;
+   
+    transition: 0.3s;
+    
+}
+.fav .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+    background-color: brown;
+}
+.fav .card::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.fav-container{
+    padding-right: 45px;
+}
+.fav-container li{
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 30px 10px;
+    position: relative;
+}
+
+
+/* favourite ends */
+/* achievement */
+.achievement-contact{
+    background-color: #39a4ac;
+    color: white;
+}
+.contact{
+    text-align: center;
+}
+.contact input, textarea{
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+.contact button{
+    border: none;
+    border-radius: 12px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+}
+.achievement-contact::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.links{
+    text-align: center;
+
+}
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    margin: 10px;
+    padding: 5px;
+    width: 50px;
+    background-color: white;
+}
+.btn:hover{
+    background-color: grey;
+}
+.footer{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+/* achievement */
+
+  
